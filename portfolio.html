@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View our gallery of stunning landscape transformations, garden designs, and property clean-outs in Winston-Salem, NC. See the CVK difference!">
+  <meta name="theme-color" content="#FFFFFF">
+  <title>Landscape Transformations & Portfolio | CVK Winston-Salem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Full-Screen Nav Overlay -->
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+    <div class="nav-overlay-inner">
+      <nav class="overlay-nav">
+        <a href="/" class="overlay-link" data-index="01">Home</a>
+        <a href="/services" class="overlay-link" data-index="02">Services</a>
+        <a href="/portfolio" class="overlay-link" data-index="03">Portfolio</a>
+        <a href="/about" class="overlay-link" data-index="04">About Us</a>
+        <a href="/contact" class="overlay-link" data-index="05">Contact</a>
+      </nav>
+      <div class="overlay-footer">
+        <a href="tel:+13369971146" class="overlay-phone">+1 336-997-1146</a>
+        <a href="https://instagram.com/cvk.llc" class="overlay-social">Instagram</a>
+        <a href="https://maps.app.goo.gl/CSDQJzZrbZDfNTPv7" target="_blank" class="overlay-social" style="margin-left: 16px;">Google Maps</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <a href="/" class="header-logo">
+      <img src="images/logo.png" alt="CVK Landscape" style="max-height: 52px; width: auto; object-fit: contain;">
+    </a>
+    <a href="tel:+13369971146" class="header-phone">+1 336-997-1146</a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="toggle-label">Menu</span>
+      <span class="toggle-icon">
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero small-hero">
+      <div class="hero-media">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80" alt="Our Work" class="hero-bg-image">
+        <div class="hero-bg-gradient"></div>
+      </div>
+      <div class="container">
+        <span class="section-eyebrow">Portfolio</span>
+        <h1 class="hero-headline">
+          <span class="hero-line-1">Transforming</span>
+          <span class="hero-line-2">Winston-Salem</span>
+          <em class="hero-line-3">Properties.</em>
+        </h1>
+        <p class="hero-subheadline reveal-fade">
+          Don't just take our word for it. Browse our recent projects to see how we elevate curb appeal through meticulous design and reliable maintenance.
+        </p>
+      </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="portfolio-section light-section">
+      <div class="container">
+        <div class="portfolio-filters reveal-fade" style="margin-bottom: 48px; display: flex; gap: 24px; flex-wrap: wrap;">
+          <button class="btn btn-ghost active" style="padding: 8px 20px;">All</button>
+          <button class="btn btn-ghost" style="padding: 8px 20px;">Garden Transformations</button>
+          <button class="btn btn-ghost" style="padding: 8px 20px;">Clean-Outs & Leaf Removal</button>
+          <button class="btn btn-ghost" style="padding: 8px 20px;">Maintenance & Trimming</button>
+        </div>
+
+        <div class="portfolio-grid-enhanced">
+          <div class="portfolio-item-large reveal-fade">
+            <div class="portfolio-image">
+              <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&q=80" alt="Before and after garden weed control and mulch installation in Winston-Salem, NC." loading="lazy">
+            </div>
+            <div class="portfolio-info">
+              <span class="portfolio-category">Mulch & Maintenance</span>
+              <h3>Garden Bed Refresh</h3>
+              <p>Winston-Salem, NC</p>
+            </div>
+          </div>
+          <div class="portfolio-item-large reveal-fade">
+            <div class="portfolio-image">
+              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Garden Design" class="parallax-img" loading="lazy">
+            </div>
+            <div class="portfolio-info">
+              <span class="portfolio-category">Garden Design</span>
+              <h3>Modern Garden Overhaul</h3>
+              <p>Kernersville, NC</p>
+            </div>
+          </div>
+          <div class="portfolio-item-large reveal-fade">
+            <div class="portfolio-image">
+              <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80" alt="Mulch Install" class="parallax-img" loading="lazy">
+            </div>
+            <div class="portfolio-info">
+              <span class="portfolio-category">Property Clean-Outs</span>
+              <h3>Seasonal Property Cleanup</h3>
+              <p>Clemmons, NC</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trust Badge Banner -->
+        <div class="trust-badge-banner reveal-fade" style="margin-top: 80px; background: var(--surface); padding: 60px; border-radius: 16px; text-align: center; border: 1px solid var(--border);">
+           <blockquote style="font-family: 'Playfair Display', serif; font-size: 1.5rem; font-style: italic; color: var(--text-primary); margin-bottom: 24px;">
+             "Chris did an amazing job with all of our gardens... much faster than I could have."
+           </blockquote>
+           <cite style="font-weight: 600; color: var(--secondary); font-style: normal;">— Michaleh S.</cite>
+        </div>
+
+        <div class="portfolio-bottom-cta reveal-fade" style="margin-top: 100px; text-align: center;">
+          <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 24px;">See a yard you like? Let's talk about yours.</h2>
+          <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Whether you need a massive weed overhaul or just want clean, sharp garden beds, we have the professional eye to make it happen.
+          </p>
+          <a href="/contact" class="btn btn-primary btn-lg">Request Your Transformation</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="CVK" class="footer-logo">
+        <p>Winston-Salem's premier choice for professional landscaping and property care.</p>
+        <p style="font-size: 0.9rem; margin-top: 10px; opacity: 0.7;">Serving: Winston-Salem, NC 27106 & Surrounding Areas</p>
+        <div style="display: flex; gap: 16px;">
+          <a href="https://instagram.com/cvk.llc" class="footer-social">Instagram ↗</a>
+          <a href="https://maps.app.goo.gl/CSDQJzZrbZDfNTPv7" target="_blank" class="footer-social">Google Maps ↗</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <a href="/services#design">Garden Design</a>
+        <a href="/services#maintenance">Maintenance</a>
+        <a href="/services#mulch">Mulch & Pine Straw</a>
+        <a href="/services#walkways">Walkway Install</a>
+        <a href="/services#cleanup">Clean-outs</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <a href="tel:+13369971146">+1 336-997-1146</a>
+        <span>Winston-Salem, NC</span>
+        <span>Mon - Fri | Closes 5 PM</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 CVK Landscape and Property Pro. LLC. All rights reserved. Designed by Daez.</p>
+    </div>
+  </footer>
+
+  <!-- Custom Cursor -->
+  <div id="custom-cursor"></div>
+  
+  <!-- Awwwards Motion Dependencies -->
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="motion.js"></script>
+  <script src="app.js" type="module"></script>
+</body>
+</html>
