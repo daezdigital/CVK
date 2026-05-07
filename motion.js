@@ -131,7 +131,7 @@ function initMotion() {
     });
 
     // 5. Scroll-driven Text Reveals (Staggered)
-    const revealElements = document.querySelectorAll('.reveal-clip-up, .reveal-fade, .service-card, .approach-item, .approach-stats, .about-image-frame');
+    const revealElements = document.querySelectorAll('.reveal-clip-up, .reveal-fade, .service-card, .approach-item, .approach-stats');
     
     revealElements.forEach(el => {
       // Reset CSS properties that might conflict
@@ -155,12 +155,29 @@ function initMotion() {
           ease: "power3.out",
           scrollTrigger: {
             trigger: el,
-            start: "top 85%", // Trigger slightly before it comes into view
+            start: "top 90%", 
             toggleActions: "play none none reverse"
           }
         }
       );
     });
+
+    // Dedicated About Image Reveal (More robust)
+    const aboutImg = document.querySelector('.about-image-frame');
+    if (aboutImg) {
+      gsap.set(aboutImg, { opacity: 0, x: -60 });
+      gsap.to(aboutImg, {
+        opacity: 1,
+        x: 0,
+        duration: 1.4,
+        ease: "power4.out",
+        scrollTrigger: {
+          trigger: aboutImg,
+          start: "top 95%",
+          toggleActions: "play none none none"
+        }
+      });
+    }
   }
 
   // 6. Contact Form Handling
