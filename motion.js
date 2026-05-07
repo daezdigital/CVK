@@ -3,7 +3,7 @@
  * Awwwards-level Motion Design: Lenis, GSAP ScrollTrigger, Custom Cursor, Magnetic Buttons
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+function initMotion() {
   // 1. Initialize Lenis (Smooth Scroll)
   const lenis = new Lenis({
     duration: 1.2,
@@ -196,4 +196,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 1500);
     });
   }
-});
+}
+
+// Initialize safely
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initMotion);
+} else {
+  initMotion();
+}

@@ -62,26 +62,28 @@ const dots = document.querySelectorAll('.dot');
 let currentSlide = 0;
 let autoplayInterval;
 
-function goToSlide(n) {
-  slides[currentSlide].classList.remove('active');
-  dots[currentSlide].classList.remove('active');
-  currentSlide = (n + slides.length) % slides.length;
-  slides[currentSlide].classList.add('active');
-  dots[currentSlide].classList.add('active');
+if (slides.length > 0) {
+  function goToSlide(n) {
+    slides[currentSlide].classList.remove('active');
+    dots[currentSlide].classList.remove('active');
+    currentSlide = (n + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+  }
+
+  document.getElementById('prev-testimonial')?.addEventListener('click', () => { goToSlide(currentSlide - 1); resetAutoplay(); });
+  document.getElementById('next-testimonial')?.addEventListener('click', () => { goToSlide(currentSlide + 1); resetAutoplay(); });
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => { goToSlide(parseInt(dot.dataset.index)); resetAutoplay(); });
+  });
+
+  function resetAutoplay() {
+    clearInterval(autoplayInterval);
+    autoplayInterval = setInterval(() => goToSlide(currentSlide + 1), 5000);
+  }
+  resetAutoplay();
 }
-
-document.getElementById('prev-testimonial')?.addEventListener('click', () => { goToSlide(currentSlide - 1); resetAutoplay(); });
-document.getElementById('next-testimonial')?.addEventListener('click', () => { goToSlide(currentSlide + 1); resetAutoplay(); });
-
-dots.forEach(dot => {
-  dot.addEventListener('click', () => { goToSlide(parseInt(dot.dataset.index)); resetAutoplay(); });
-});
-
-function resetAutoplay() {
-  clearInterval(autoplayInterval);
-  autoplayInterval = setInterval(() => goToSlide(currentSlide + 1), 5000);
-}
-resetAutoplay();
 
 // --- TICKER pause on hover ---
 const ticker = document.querySelector('.ticker-track');
