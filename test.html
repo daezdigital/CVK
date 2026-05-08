@@ -47,6 +47,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- PRODUCTION VISIBILITY TEST -->
+  <div style="background: red; color: white; padding: 20px; text-align: center; font-weight: bold; z-index: 9999; position: relative;">
+    PHOTO TEST v1.1.0: <img src="/images/founder.jpg" style="height: 50px; vertical-align: middle;">
+  </div>
 
   <!-- Full-Screen Nav Overlay -->
   <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
@@ -346,7 +350,7 @@
       <div class="about-grid">
         <div class="about-image-col">
           <div class="about-image-frame" style="opacity: 1 !important; visibility: visible !important; display: block !important;">
-            <img src="images/founder.jpg?v=110" alt="Chris Van Kleeck - Owner" style="display: block !important; opacity: 1 !important; visibility: visible !important; width: 100%; height: 100%; object-fit: cover;">
+            <img src="/images/founder.jpg?v=110" alt="Chris Van Kleeck - Owner" style="display: block !important; opacity: 1 !important; visibility: visible !important; width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 10;">
             <div class="about-image-badge">
               <span>Licensed</span>
               <span>REALTOR®</span>
